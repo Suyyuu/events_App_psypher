@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# events_App_psypher
+an tier based events showcase app. assignment for psypher ai.
 
-## Getting Started
+# 🎭 Tier-Based Event Showcase
 
-First, run the development server:
+This project is a responsive event listing web app built using **Next.js 14 (App Router)**, **Clerk.dev** for authentication, **Supabase (PostgreSQL)** for event storage, and **Tailwind CSS** for styling.
+
+Users can sign in and view events available to their **tier** or any lower tier. For example, a Gold user can see Free, Silver, and Gold events — but not Platinum.
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend**: Next.js 14 (App Router)
+- **Auth**: Clerk.dev
+- **Database**: Supabase (PostgreSQL)
+- **Styling**: Tailwind CSS
+
+---
+
+## 🧪 Demo Users
+
+You can use the following demo accounts to test tier-specific behavior:
+
+| Email                  | Password      | Tier      |
+|------------------------|---------------|-----------|
+| free@example.com       | 1705free@     | Free      |
+| silver@example.com     | 1705silver@   | Silver    |
+| gold@example.com       | 1705gold@     | Gold      |
+| platinum@example.com   | 1705platinum@ | Platinum  |
+
+➡️ Log in with any of the above to see how the event list changes per tier.
+
+---
+
+## 📸 Features
+
+- ✅ Clerk-powered login & sign-up
+- ✅ Supabase-backed event storage
+- ✅ Tier-based event filtering (user sees events for their tier and below)
+- ✅ Clean, mobile-friendly UI with Tailwind CSS
+- ✅ Full support for public metadata via Clerk
+- ✅ Loading and error handling states
+- ✅ Demo users per tier with pre-seeded metadata
+
+---
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+/src
+  /app
+    /events        # Auth-protected events page
+    /api           # API route for future extension (e.g., tier updates)
+  /lib
+    supabase.js    # Supabase client
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I was low on time as i was on family vacation to hyderabad.. which is why i had to rush the development within 3 hours. and i cam up with this project.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
